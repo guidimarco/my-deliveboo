@@ -14,13 +14,16 @@ class DishesTableSeeder extends Seeder
     public function run()
     {
         $restaurants = config('restaurants.restaurantsArray');
+        $dishes = config('dishes.dishesArray');
 
         foreach ($restaurants as $thisRestaurantId => $restaurant) {
 
-            // tutti i piatti del ristorante
+            // tutti i piatti del ristorante -> array di numeri
             $thisRestaurantDishes = $restaurant['dishes'];
 
-            foreach ($thisRestaurantDishes as $dish) {
+            foreach ($thisRestaurantDishes as $dishId) {
+                $currentDish = $dishes[$dishId];
+
                 // new object -> dish
                 $new_dish = new Dish();
 
@@ -28,12 +31,12 @@ class DishesTableSeeder extends Seeder
                 $new_dish->restaurant_id = $thisRestaurantId;
 
                 // Assign name, ingredients, description, prezzo, img
-                $new_dish->name = $dish['name'];
-                $new_dish->ingredients = $dish['ingredients'];
-                $new_dish->description = $dish['description'];
-                $new_dish->unit_price = $dish['unit_price'];
-                $new_dish->visible = $dish['visible'];
-                $new_dish->img_cover = $dish['img_cover'];
+                $new_dish->name = $currentDish['name'];
+                $new_dish->ingredients = $currentDish['ingredients'];
+                $new_dish->description = $currentDish['description'];
+                $new_dish->unit_price = $currentDish['unit_price'];
+                $new_dish->visible = $currentDish['visible'];
+                $new_dish->img_cover = $currentDish['img_cover'];
 
                 // Slug
                 $slug = Str::slug($new_dish->name);

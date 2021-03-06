@@ -99,7 +99,7 @@ var app = new Vue({
     categories: [],
     selectedCategories: [],
     restaurants: [],
-    url_base: "http://localhost:8000/storage/"
+    url_base: "http://localhost:8000/storage/uploads/restaurants/"
   },
   methods: {
     // Metodo per ricaricare tutti i ristoranti
@@ -245,7 +245,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\my-deliveboo\resources\js\homepage.js */"./resources/js/homepage.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\proj_boolean\20210306_my-deliveboo\my-deliveboo\resources\js\homepage.js */"./resources/js/homepage.js");
 
 
 /***/ })

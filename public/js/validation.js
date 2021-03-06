@@ -226,7 +226,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\my-deliveboo\resources\js\validation.js */"./resources/js/validation.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\proj_boolean\20210306_my-deliveboo\my-deliveboo\resources\js\validation.js */"./resources/js/validation.js");
 
 
 /***/ })

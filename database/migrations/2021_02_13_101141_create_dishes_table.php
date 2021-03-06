@@ -15,7 +15,7 @@ class CreateDishesTable extends Migration
     {
         Schema::create('dishes', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
+            $table->string('name');
             $table->text('ingredients')->nullable();
             $table->text('description')->nullable();
             $table->unsignedDecimal('unit_price', 5,2);

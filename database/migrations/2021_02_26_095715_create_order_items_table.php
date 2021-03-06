@@ -17,7 +17,7 @@ class CreateOrderItemsTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('dish_id');
-            $table->string('dish_name', 30);
+            $table->string('dish_name');
             $table->unsignedDecimal('unit_price', 5,2);
             $table->unsignedTinyInteger('quantity');
 

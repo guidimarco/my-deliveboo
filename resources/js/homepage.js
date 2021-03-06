@@ -5,7 +5,7 @@ var app = new Vue({
         categories: [],
         selectedCategories: [],
         restaurants: [],
-        url_base: "http://localhost:8000/storage/"
+        url_base: "http://localhost:8000/storage/uploads/restaurants/"
     },
 
     methods: {

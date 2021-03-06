@@ -9,7 +9,7 @@
     <div id="app">
 
         {{-- Sezione con info del ristorante --}}
-        <section class="info-section" style="background-image: url({{ asset('storage/'.$restaurant->img_cover) }}); background-position: center; background-size: cover">
+        <section class="info-section" style="background-image: url({{ asset('storage/uploads/restaurants/'.$restaurant->img_cover) }}); background-position: center; background-size: cover">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -96,7 +96,7 @@
 
                                         {{-- Immagine piatto --}}
                                         <div v-if="dish.img_cover"  class="dish-img">
-                                            <img :src="'../storage/' + dish.img_cover" class="card-img-top" />
+                                            <img :src="'../storage/uploads/dishes/' + dish.img_cover" class="card-img-top" />
                                         </div>
                                     </div>
                                 </div>{{-- Chiusura col-6 -> Card Piatti --}}
@@ -170,7 +170,7 @@
 
                 <div class="body p-4">
                     <div class="dish-img" v-if="thisSelectedDish.img_cover">
-                        <img :src="'../storage/' + thisSelectedDish.img_cover" :alt="thisSelectedDish.name">
+                        <img :src="'../storage/uploads/dishes/' + thisSelectedDish.img_cover" :alt="thisSelectedDish.name">
                     </div>
 
                     <div class="dish-description">
