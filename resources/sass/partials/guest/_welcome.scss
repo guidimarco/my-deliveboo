@@ -1,4 +1,4 @@
-#welcome-blade{
+#welcome-blade {
 
     h2 {
 
@@ -6,22 +6,27 @@
     }
 
     #jumbotron {
+        position: relative;
         padding: 40px 0;
-        // background-color: $backgroundBrandPr;
-        // background-image: linear-gradient($backgroundBrandPr, white );
-        height: 40vh;
-        color: $textTitlePr;
-        background-image: url('../imgs/foods.png'), linear-gradient($backgroundBrandPr, white );
-        background-size: contain;
+        height: calc(100vh - #{$dashboardHeaderHeight});
+        max-height: 870px;
+        background-image: url('../images/jumbotron.png');
+        background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        h1 {
-            color: white;
+        display: flex;
+        align-items: flex-end;
+        .jumb {
+            position: relative;
+            z-index: 10;
         }
+        .waves {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
         }
+    }
 
     .main {
-        background-color: #fff;
+        background-color: #eeeeee;
     }
 
     // categorie

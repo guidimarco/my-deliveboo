@@ -17,10 +17,13 @@
         <section id="jumbotron">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 jumb">
-                        <h1>Benvenuto!</h1>
+                    <div class="col-12 jumb text-wrap">
+                        <h1>#aCasaTuaConDeliveboo!</h1>
                     </div>
                 </div>
+            </div>
+            <div class="waves">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#eeeeee" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,96C384,85,480,107,576,117.3C672,128,768,128,864,122.7C960,117,1056,107,1152,112C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
         </section>
         <!-- Main App: Filtri per categorie e stampa ristoranti -->

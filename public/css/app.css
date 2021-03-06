@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -11343,7 +11343,7 @@ header nav#guest-navbar {
 }
 
 header nav#guest-navbar .logo-brand {
-  height: 32px;
+  height: 40px;
 }
 
 header nav#guest-navbar .logo-brand img {
@@ -11359,21 +11359,31 @@ header nav#guest-navbar .navbar-nav .nav-link {
 }
 
 #welcome-blade #jumbotron {
+  position: relative;
   padding: 40px 0;
-  height: 40vh;
-  color: #440063;
-  background-image: url(/images/foods.png?3567b73de508c642d921a0f49e0212b5), linear-gradient(#00CCBC, white);
-  background-size: contain;
+  height: calc(100vh - 70px);
+  max-height: 870px;
+  background-image: url(/images/jumbotron.png?7265cc5924cdc06ae5a7a7c8215e36f7);
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
 }
 
-#welcome-blade #jumbotron h1 {
-  color: white;
+#welcome-blade #jumbotron .jumb {
+  position: relative;
+  z-index: 10;
+}
+
+#welcome-blade #jumbotron .waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #welcome-blade .main {
-  background-color: #fff;
+  background-color: #eeeeee;
 }
 
 #welcome-blade #category-container {
@@ -11782,7 +11792,7 @@ header nav#guest-navbar .navbar-nav .nav-link {
 
 footer {
   padding: 20px 0 20px 0;
-  background-color: #ffad00;
+  background-color: #2e3333;
 }
 
 footer h5 {
@@ -11793,48 +11803,48 @@ footer li {
   font-size: 16px;
 }
 
-.footer-container-top {
-  display: flex;
-  justify-content: space-between;
+footer .footer-card {
+  min-height: 200px;
+  border-radius: 10px;
+  border-width: 0px;
+  background-color: #434848;
+  color: #fff;
 }
 
-.footer-container-top .row {
-  width: 100%;
+footer .footer-card h5 {
+  font-size: 16px;
 }
 
-.footer-container-top .card {
-  margin-top: 10px;
+footer .footer-card .footer-card-body li a {
+  font-size: 12px;
 }
 
-.footer-container-top .foot-flex {
-  justify-content: space-between;
+footer .footer-card .footer-card-body li a:hover {
+  color: #00b8a9;
 }
 
-.footer-container-top ul li {
-  display: block;
+footer .footer-card .footer-card-body .app-link {
+  max-width: 140px;
 }
 
-.footer-container-top .imgbox img {
-  max-width: 55%;
-  max-height: 80px;
+footer .social {
+  color: #fff;
 }
 
-.footer-container-bottom {
-  height: 40px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+footer .social .fa-facebook:hover {
+  color: #1877f2;
 }
 
-.footer-container-bottom .links i {
-  font-size: 25px;
-  margin-right: 7px;
+footer .social .fa-twitter:hover {
+  color: #55acee;
 }
 
-.footer-container-bottom small {
-  font-size: 20px;
-  color: white;
+footer .social .fa-instagram:hover {
+  color: #f00075;
+}
+
+footer .copy {
+  color: #828285;
 }
 
 @media all and (max-width: 768px) {
