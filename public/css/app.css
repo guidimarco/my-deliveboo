@@ -10404,18 +10404,19 @@ header nav#guest-navbar .navbar-nav .nav-link {
 }
 #welcome-blade .main {
   background-color: #eeeeee;
+  min-height: 100vh;
 }
 #welcome-blade #category-container {
   position: relative;
 }
 #welcome-blade #category-container .category-container {
   overflow-x: hidden;
-  margin-bottom: 10px;
 }
 #welcome-blade #category-container .category-container .card-size {
+  position: relative;
   box-sizing: border-box;
   min-width: 180px;
-  min-height: 90px;
+  height: 90px;
   display: flex;
   align-items: flex-end;
   color: #fff;
@@ -10428,43 +10429,76 @@ header nav#guest-navbar .navbar-nav .nav-link {
   cursor: pointer;
 }
 #welcome-blade #category-container .category-container .card-size span {
-  background-color: rgba(1, 1, 1, 0.4);
   padding: 3px;
-  border-radius: 5px;
 }
-#welcome-blade #category-container .category-container .card-size.selected span {
-  color: #121212;
-  background-color: rgba(255, 165, 0, 0.9);
+#welcome-blade #category-container .category-container .card-size img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
-#welcome-blade #category-container .category-container #Italiano {
-  background-image: url("https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/pasta.png");
+#welcome-blade #category-container .category-container .card-size#tutte, #welcome-blade #category-container .category-container .card-size#Italiano, #welcome-blade #category-container .category-container .card-size#Cinese, #welcome-blade #category-container .category-container .card-size#Giapponese, #welcome-blade #category-container .category-container .card-size#Indiano, #welcome-blade #category-container .category-container .card-size#Fusion, #welcome-blade #category-container .category-container .card-size#Hamburger, #welcome-blade #category-container .category-container .card-size#Pizza, #welcome-blade #category-container .category-container .card-size#Kebab, #welcome-blade #category-container .category-container .card-size#Greco, #welcome-blade #category-container .category-container .card-size#Thailandese {
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: relative;
 }
-#welcome-blade #category-container .category-container #Giapponese {
-  background-image: url("https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/sushi-1.png");
+#welcome-blade #category-container .category-container .card-size#tutte .overlay, #welcome-blade #category-container .category-container .card-size#Italiano .overlay, #welcome-blade #category-container .category-container .card-size#Cinese .overlay, #welcome-blade #category-container .category-container .card-size#Giapponese .overlay, #welcome-blade #category-container .category-container .card-size#Indiano .overlay, #welcome-blade #category-container .category-container .card-size#Fusion .overlay, #welcome-blade #category-container .category-container .card-size#Hamburger .overlay, #welcome-blade #category-container .category-container .card-size#Pizza .overlay, #welcome-blade #category-container .category-container .card-size#Kebab .overlay, #welcome-blade #category-container .category-container .card-size#Greco .overlay, #welcome-blade #category-container .category-container .card-size#Thailandese .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
 }
-#welcome-blade #category-container .category-container #Cinese {
-  background-image: url("https://rs-menus-api.roocdn.com/images/c4d646bb-c071-441a-afa4-e625935f32d1/image.jpeg");
+#welcome-blade #category-container .category-container .card-size#tutte.selected .overlay, #welcome-blade #category-container .category-container .card-size#Italiano.selected .overlay, #welcome-blade #category-container .category-container .card-size#Cinese.selected .overlay, #welcome-blade #category-container .category-container .card-size#Giapponese.selected .overlay, #welcome-blade #category-container .category-container .card-size#Indiano.selected .overlay, #welcome-blade #category-container .category-container .card-size#Fusion.selected .overlay, #welcome-blade #category-container .category-container .card-size#Hamburger.selected .overlay, #welcome-blade #category-container .category-container .card-size#Pizza.selected .overlay, #welcome-blade #category-container .category-container .card-size#Kebab.selected .overlay, #welcome-blade #category-container .category-container .card-size#Greco.selected .overlay, #welcome-blade #category-container .category-container .card-size#Thailandese.selected .overlay {
+  background-color: rgba(0, 0, 0, 0);
 }
-#welcome-blade #category-container .category-container #Indiano {
-  background-image: url("https://f.roocdn.com/images/menus/212763/header-image.jpg");
+#welcome-blade #category-container .category-container .card-size#tutte {
+  background-color: #FE9364;
 }
-#welcome-blade #category-container .category-container #Fusion {
-  background-image: url("https://rs-menus-api.roocdn.com/images/3dbd97e3-8ce9-4c31-9a65-75dcf1cfa368/image.jpeg");
+#welcome-blade #category-container .category-container .card-size#Italiano {
+  background-color: #007E8A;
+  background-image: url("../images/carousel/italiano.png");
 }
-#welcome-blade #category-container .category-container #Hamburger {
-  background-image: url("https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/burgers-1.png");
+#welcome-blade #category-container .category-container .card-size#Cinese {
+  background-color: #00CCCB;
+  background-image: url("../images/carousel/cinese.png");
 }
-#welcome-blade #category-container .category-container #Pizza {
-  background-image: url("https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/pizza.png");
+#welcome-blade #category-container .category-container .card-size#Giapponese {
+  background-color: #3D0059;
+  background-image: url("../images/carousel/giapponese.png");
 }
-#welcome-blade #category-container .category-container #Kebab {
-  background-image: url("https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/kebab.png");
+#welcome-blade #category-container .category-container .card-size#Indiano {
+  background-color: #FABE00;
+  background-image: url("../images/carousel/indiano.png");
 }
-#welcome-blade #category-container .category-container #Greco {
-  background-image: url("https://rs-menus-api.roocdn.com/images/4828a08c-2388-4f11-ac20-8c0362ea1c6e/image.jpeg");
+#welcome-blade #category-container .category-container .card-size#Fusion {
+  background-color: #E95A61;
+  background-image: url("../images/carousel/fusion.png");
 }
-#welcome-blade #category-container .category-container #Thailandese {
-  background-image: url("https://f.roocdn.com/images/menus/54856/header-image.jpg");
+#welcome-blade #category-container .category-container .card-size#Hamburger {
+  background-color: #981671;
+  background-image: url("../images/carousel/hamburger.png");
+}
+#welcome-blade #category-container .category-container .card-size#Pizza {
+  background-color: #007E8A;
+  background-image: url("../images/carousel/pizza.png");
+}
+#welcome-blade #category-container .category-container .card-size#Kebab {
+  background-color: #00CCCB;
+  background-image: url("../images/carousel/kebab.png");
+}
+#welcome-blade #category-container .category-container .card-size#Greco {
+  background-color: #3D0059;
+  background-image: url("../images/carousel/greco.png");
+}
+#welcome-blade #category-container .category-container .card-size#Thailandese {
+  background-color: #FABE00;
+  background-image: url("../images/carousel/thailandese.png");
 }
 #welcome-blade #category-container .category-arrow {
   display: flex;
@@ -10505,10 +10539,10 @@ header nav#guest-navbar .navbar-nav .nav-link {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transition: all 1s;
 }
 #welcome-blade #restaurant-container .restaurant-card:hover .cover-container img {
   transform: scale(1.2);
-  transition: all 1s;
 }
 #welcome-blade #restaurant-container .restaurant-card .body-container .card-title {
   color: black;

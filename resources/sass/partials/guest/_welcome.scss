@@ -27,6 +27,7 @@
 
     .main {
         background-color: #eeeeee;
+        min-height: 100vh;
     }
 
     // categorie
@@ -35,13 +36,13 @@
 
         .category-container {
             overflow-x: hidden;
-            margin-bottom: 10px;
 
             // Category Card
             .card-size {
+                position: relative;
                 box-sizing: border-box;
                 min-width: 180px;
-                min-height: 90px;
+                height: 90px;
                 display: flex;
                 align-items: flex-end;
                 color: #fff;
@@ -55,48 +56,75 @@
                 font-size: 16px;
                 cursor: pointer;
                 span{
-                    background-color: rgba(1,1,1,0.4);
                     padding: 3px;
-                    border-radius: 5px;
+                }
+                img {
+                    position: absolute;
+                    bottom: 0; right: 0;
+                    max-width: 100%;
+                    max-height: 100%;
                 }
 
-                &.selected{
-                    span{
-                        color: #121212;
-                        background-color: rgba(255,165,0, 0.9);
+                &#tutte, &#Italiano, &#Cinese, &#Giapponese, &#Indiano, &#Fusion, &#Hamburger, &#Pizza, &#Kebab, &#Greco, &#Thailandese {
+                    background-size: contain;
+                    background-position: top right;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    & .overlay {
+                        content: '';
+                        position: absolute;
+                        top: 0; bottom: 0; right: 0; left: 0;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        border-radius: 4px;
                     }
-
+                    &.selected .overlay {
+                        background-color: rgba(0, 0, 0, 0);
+                    }
                 }
-            }
-            #Italiano {
-                background-image: url('https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/pasta.png');
-            }
-            #Giapponese {
-                background-image: url('https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/sushi-1.png');
-            }
-            #Cinese {
-                background-image: url('https://rs-menus-api.roocdn.com/images/c4d646bb-c071-441a-afa4-e625935f32d1/image.jpeg');
-            }
-            #Indiano {
-                background-image: url('https://f.roocdn.com/images/menus/212763/header-image.jpg');
-            }
-            #Fusion {
-                background-image: url('https://rs-menus-api.roocdn.com/images/3dbd97e3-8ce9-4c31-9a65-75dcf1cfa368/image.jpeg');
-            }
-            #Hamburger {
-                background-image: url('https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/burgers-1.png');
-            }
-            #Pizza {
-                background-image: url('https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/pizza.png');
-            }
-            #Kebab {
-                background-image: url('https://co-restaurants.roocdn.com/images/24e31bf6996eda7c898addda4291450f982b43c9/shortcut/kebab.png');
-            }
-            #Greco {
-                background-image: url('https://rs-menus-api.roocdn.com/images/4828a08c-2388-4f11-ac20-8c0362ea1c6e/image.jpeg');
-            }
-            #Thailandese {
-                background-image: url('https://f.roocdn.com/images/menus/54856/header-image.jpg');
+                // colore e img
+                &#tutte {
+                    background-color: #FE9364;
+                }
+                &#Italiano {
+                    background-color: #007E8A;
+                    background-image: url('../images/carousel/italiano.png');
+                }
+                &#Cinese {
+                    background-color: #00CCCB;
+                    background-image: url('../images/carousel/cinese.png');
+                }
+                &#Giapponese {
+                    background-color: #3D0059;
+                    background-image: url('../images/carousel/giapponese.png');
+                }
+                &#Indiano {
+                    background-color: #FABE00;
+                    background-image: url('../images/carousel/indiano.png');
+                }
+                &#Fusion {
+                    background-color: #E95A61;
+                    background-image: url('../images/carousel/fusion.png');
+                }
+                &#Hamburger {
+                    background-color: #981671;
+                    background-image: url('../images/carousel/hamburger.png');
+                }
+                &#Pizza {
+                    background-color: #007E8A;
+                    background-image: url('../images/carousel/pizza.png');
+                }
+                &#Kebab {
+                    background-color: #00CCCB;
+                    background-image: url('../images/carousel/kebab.png');
+                }
+                &#Greco {
+                    background-color: #3D0059;
+                    background-image: url('../images/carousel/greco.png');
+                }
+                &#Thailandese {
+                    background-color: #FABE00;
+                    background-image: url('../images/carousel/thailandese.png');
+                }
             }
         }
 
@@ -125,14 +153,6 @@
                 box-shadow: 0 6px 20px rgb(0 0 0 / 8%);
             }
         }
-
-        // .left {
-        //     left: -20px;
-        // }
-        //
-        // .right {
-        //     right: -20px;
-        // }
     }
 
     // ristoranti
@@ -156,6 +176,7 @@
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
+                    transition: all 1s;
                 }
             }
 
@@ -163,7 +184,6 @@
                 .cover-container {
                     img {
                         transform: scale(1.2);
-                        transition: all 1s;
                     }
                 }
             }

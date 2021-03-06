@@ -53,13 +53,16 @@
                     <div class="col-11 col-md-12" id="category-container">
                         <div class="category-container d-flex justify-content-between" id="cat">
                             <!-- Tutte le categorie -->
-                            <div class="mr-2 card-size p-1" @click="clearCategories()">
+                            <div class="mr-2 card-size p-1" :class="selectedCategories.length == 0 ? 'selected' : ''" @click="clearCategories()" id="tutte">
+                                <div class="overlay"></div>
                                 <span>Tutte</span>
                             </div>
 
                             <!-- Singole categorie -->
-                            <div v-for="(category,index) in categories" class="mr-2 card-size p-1" :class="selectedCategories.includes(category.id)? 'selected' : ''" @click="selectedCategory(category.id)" :id="category.name">
+                            <div v-for="(category,index) in categories" class="mr-2 card-size p-1" :class="selectedCategories.length == 0 || selectedCategories.includes(category.id) ? 'selected' : ''" @click="selectedCategory(category.id)" :id="category.name">
+                                <div class="overlay"></div>
                                 <span>@{{category.name}}</span>
+                                {{-- <img :src="'images/carousel/' + category.name + '.png'" :alt="'immagine della categoria' + category.name"> --}}
                             </div>
                         </div>
 
