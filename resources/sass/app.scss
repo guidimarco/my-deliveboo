@@ -11,7 +11,7 @@
 @import 'partials/carousel';
 
 //Sass
-@import "partials/_common";
+@import "partials/common";
 
 // Dashboard
 @import "partials/dashboard/header";
@@ -23,8 +23,8 @@
 
 //Guest
 @import "partials/guest/header";
-@import "partials/guest/_welcome";
-@import "partials/guest/_braintree";
+@import "partials/guest/welcome";
+@import "partials/guest/braintree";
 @import "partials/guest/show";
 @import "partials/guest/footer";
 
