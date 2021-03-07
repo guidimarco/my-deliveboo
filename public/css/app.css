@@ -10062,7 +10062,16 @@ a, a:hover {
 }
 .btn-primary-brand:hover {
   color: #fff;
-  background: #00c2b3;
+  background: #00ccbc;
+}
+
+.btn-secondary-brand {
+  color: #00ccbc;
+  background: #fff;
+}
+.btn-secondary-brand:hover {
+  color: #fff;
+  background: #00ccbc;
 }
 
 .btn-primary-alt {
@@ -10070,6 +10079,16 @@ a, a:hover {
   background: #fff;
 }
 .btn-primary-alt:hover {
+  color: #00c2b3;
+  background: #fff;
+}
+
+.btn-secondary-brand-alt {
+  color: #fff;
+  background: #00ccbc;
+  border: 2px solid #fff;
+}
+.btn-secondary-brand-alt:hover {
   color: #00c2b3;
   background: #fff;
 }
@@ -10224,7 +10243,16 @@ a, a:hover {
 }
 .btn-primary-brand:hover {
   color: #fff;
-  background: #00c2b3;
+  background: #00ccbc;
+}
+
+.btn-secondary-brand {
+  color: #00ccbc;
+  background: #fff;
+}
+.btn-secondary-brand:hover {
+  color: #fff;
+  background: #00ccbc;
 }
 
 .btn-primary-alt {
@@ -10232,6 +10260,16 @@ a, a:hover {
   background: #fff;
 }
 .btn-primary-alt:hover {
+  color: #00c2b3;
+  background: #fff;
+}
+
+.btn-secondary-brand-alt {
+  color: #fff;
+  background: #00ccbc;
+  border: 2px solid #fff;
+}
+.btn-secondary-brand-alt:hover {
   color: #00c2b3;
   background: #fff;
 }
@@ -10291,8 +10329,13 @@ a, a:hover {
 header {
   height: 70px;
 }
-header nav {
+header #admin-navbar {
   height: 70px;
+  background-color: #00CCBC;
+  color: white;
+}
+header #admin-navbar img {
+  max-height: 32px;
 }
 
 #main-dashboard-wrapper .row #sidebarMenu {

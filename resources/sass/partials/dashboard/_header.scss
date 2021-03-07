@@ -1,8 +1,14 @@
 header {
     height: $dashboardHeaderHeight;
 
-    nav {
+    #admin-navbar {
         height: $dashboardHeaderHeight;
+        background-color: #00CCBC;
+        color: white;
+
+        img {
+            max-height: 32px;
+        }
     }
 
 } // fine header

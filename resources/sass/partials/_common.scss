@@ -56,13 +56,31 @@ a, a:hover {
     background: #00ccbc;
     &:hover {
         color: #fff;
-        background: #00c2b3;
+        background: #00ccbc;
+    }
+}
+.btn-secondary-brand {
+    color: #00ccbc;
+    background: #fff;
+    &:hover {
+        color: #fff;
+        background: #00ccbc;
     }
 }
 
 .btn-primary-alt {
     color: #00ccbc;
     background: #fff;
+
+    &:hover {
+        color: #00c2b3;
+        background: #fff;
+    }
+}
+.btn-secondary-brand-alt {
+    color: #fff;
+    background: #00ccbc;
+    border: 2px solid #fff;
 
     &:hover {
         color: #00c2b3;
