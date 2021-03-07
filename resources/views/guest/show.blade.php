@@ -81,9 +81,12 @@
                                     <div class="dish-card my-2 p-2" :class="getCartQuantity(dish.id) != 0 ? 'addedToCart' : ''">
                                         {{-- Info piatto --}}
                                         <div class="dish-info">
-                                            <div class="info" @click="dishInfo(dish)">
+                                            <div class="info-icon" @click="dishInfo(dish)">
+                                                <i class="fas fa-2x fa-info-circle"></i>
+                                            </div>
+
+                                            <div class="info">
                                                 <h5 class="card-title capitalize">@{{ dish.name }}</h5>
-                                                <i class="fas fa-info-circle"></i>
                                                 <p class="card-text">@{{ dish.unit_price }} €</p>
                                             </div>
 

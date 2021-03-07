@@ -126,8 +126,6 @@ var app = new Vue({
             return itemQuantity;
         }
     },
-
-    // ***************** Mounted
     mounted() {
         let self = this;
 

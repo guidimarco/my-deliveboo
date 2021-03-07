@@ -214,7 +214,6 @@ var app = new Vue({
       return itemQuantity;
     }
   },
-  // ***************** Mounted
   mounted: function mounted() {
     var self = this; // prendo l'id del ristorante
 

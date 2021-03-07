@@ -119,9 +119,10 @@
     } // END Cart
 
     .dish-card {
+        position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: space-between; align-items: center;
+        justify-content: space-between; align-items: flex-start;
         background-color: #fff;
         color: #828585;
         border-left: 4px solid transparent;
@@ -134,23 +135,32 @@
 
         h5 {
             color: $textPr;
+            font-size: 16px;
         }
 
         .dish-info {
+
+            .info-icon {
+                cursor: pointer;
+                position: absolute;
+                top: 0; right: 0;
+                transform: translate(30%, -30%);
+                i {
+                    color:  #00ccbc;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+            }
 
             .info {
                 h5 {
                     display: inline-block;
                 }
-
-                i {
-                    color:  #00ccbc;
-                    cursor: pointer;
-                }
             }
         }
         .dish-img {
             width: 100px; height: 100px;
+            flex-shrink: 0;
 
             img {
                 width: 100%; height: 100%;
