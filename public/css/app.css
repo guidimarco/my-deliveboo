@@ -10387,6 +10387,17 @@ header nav#guest-navbar .logo-brand img {
 header nav#guest-navbar .navbar-nav .nav-link {
   color: #2E3333;
 }
+header .log-in-menu {
+  color: #00CCBC;
+  font-size: 14px;
+}
+header .log-in-menu .dropdown-item {
+  color: #00CCBC;
+  font-size: 14px;
+}
+header .log-in-menu .dropdown-item:active {
+  background-color: #fff;
+}
 
 #welcome-blade h2 {
   font-size: 20px;

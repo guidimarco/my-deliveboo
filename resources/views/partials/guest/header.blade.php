@@ -13,40 +13,39 @@
                 <ul class="navbar-nav ml-auto flex-row">
                     <!-- Authentication Links -->
                     @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                    <li class="nav-item ml-3">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
-                    @endif
+                        <li class="nav-item">
+                            <a class="btn btn-primary-brand btn-sm" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                        <li class="nav-item ml-3">
+                            <a class="btn btn-primary-alt btn-sm" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                        @endif
                     @else
-
-                    <li class="nav-item dropdown">
-                        <!-- Visible -> username -->
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
-                        </a>
-
-                        <!-- DropdownMenu -->
-                        <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
-                            <!-- Link to dashboard -->
-                            <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                Dashboard
+                        <li class="nav-item dropdown log-in-menu">
+                            <!-- Visible -> username -->
+                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
                             </a>
 
-                            <!-- Logout -->
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                            <!-- END Logout -->
-                        </div>
-                    </li>
+                            <!-- DropdownMenu -->
+                            <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+                                <!-- Link to dashboard -->
+                                <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                    Dashboard
+                                </a>
+
+                                <!-- Logout -->
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                                <!-- END Logout -->
+                            </div>
+                        </li>
                     @endguest
                 </ul>
 
