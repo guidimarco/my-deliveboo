@@ -21,6 +21,9 @@
 @import "partials/dashboard/home";
 @import "partials/dashboard/dishes";
 
+// AUTHENTICATION
+@import "partials/auth/auth";
+
 //Guest
 @import "partials/guest/header";
 @import "partials/guest/welcome";

@@ -1,0 +1,10 @@
+#log-in {
+    background-color: #eee;
+    height: calc(100vh - #{$guestHeaderHeight});
+    .form-container {
+        display: inline-block;
+        flex-basis: 800px;
+        background-color: #fff;
+        box-shadow: 0 1px 4px rgb(0 0 0 / 8%), 0 0 0 1px rgb(0 0 0 / 4%);
+    }
+}

@@ -10358,6 +10358,17 @@ header nav {
   max-height: 100%;
 }
 
+#log-in {
+  background-color: #eee;
+  height: calc(100vh - 70px);
+}
+#log-in .form-container {
+  display: inline-block;
+  flex-basis: 800px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
 header {
   height: 70px;
   color: #2E3333;
