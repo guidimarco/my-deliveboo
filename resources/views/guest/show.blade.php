@@ -1,5 +1,8 @@
 @extends('layouts.app')
-@section('page-title', 'Welcome Page')
+
+@section('page-title')
+    Deliveboo - {{ $restaurant->name }}
+@endsection
 
 @section('script')
     <script src="{{ asset('js/show_restaurant.js') }}" defer></script>
@@ -16,23 +19,32 @@
                         <div class="info-container">
 
                             {{-- Sezione di sinistra con info ristorante --}}
-                            <div class="restaurant-info p-5">
-                                <h1 id="restaurant-id" class="text-capitalize" hidden>{{ $restaurant->id }}</h1>
+                            <div class="restaurant-info p-4">
+                                <span id="restaurant-id" class="text-capitalize" hidden>{{ $restaurant->id }}</span>
 
                                 {{-- Nome Ristorante --}}
                                 <h1 id="restaurant-name" class="text-capitalize">{{ $restaurant->name }}</h1>
 
-                                <p class="address"><span><i class="fas fa-map-marker-alt restaurant-icon"></i></span> Indirizzo: {{ $restaurant->address}}</p>
-
-                                {{-- Lista categorie ristorante --}}
-                                <p class="info-res">
-                                    <span><i class="fas fa-utensils restaurant-icon"></i></span> Categorie:
-                                    @foreach ($restaurant->categories as $category)
-                                        <span class="badge badge-info">{{ $category->name }}</span>
-                                    @endforeach
+                                <p class="address m-0 mt-2">
+                                    <i class="fas fa-map-marker-alt restaurant-icon"></i>
+                                    Indirizzo:
+                                    <span>
+                                        {{ $restaurant->address }}
+                                    </span>
                                 </p>
 
-                                <p><span><i class="fas fa-shipping-fast restaurant-icon"></i></span> Consegna gratuita</p>
+                                {{-- Lista categorie ristorante --}}
+                                <p class="info-res m-0 mt-2">
+                                    <i class="fas fa-utensils restaurant-icon"></i>
+                                    Categorie:
+                                    <span>
+                                        @foreach ($restaurant->categories as $category)
+                                            {{ $category->name }}@if (!$loop->last),@endif
+                                        @endforeach
+                                    </span>
+                                </p>
+
+                                <p class="m-0 mt-2"><span><i class="fas fa-shipping-fast restaurant-icon"></i></span> Consegna gratuita</p>
 
                             </div>
 
@@ -82,7 +94,7 @@
                                         {{-- Info piatto --}}
                                         <div class="dish-info">
                                             <div class="info-icon" @click="dishInfo(dish)">
-                                                <i class="fas fa-2x fa-info-circle"></i>
+                                                <i class="fas fa-info-circle"></i>
                                             </div>
 
                                             <div class="info">
@@ -124,7 +136,7 @@
                                 </div>
 
                                 {{-- Nome --}}
-                                <div class="name">
+                                <div class="name pl-2">
                                     @{{ cartItem.name }}
                                 </div>
 
@@ -165,7 +177,7 @@
         <div class="selected-dish-info d-none" :class="!isLoading ? 'not-loading' : ''" v-if="dishSelected">
             <div class="card-dish-selected">
                 <div class="header">
-                    <h5 class="text-uppercase m-0">@{{ thisSelectedDish.name }}</h5>
+                    <h6 class="m-0">@{{ thisSelectedDish.name }}</h6>
                     <div class="close-dish-info" @click="closeDishInfo">
                         <i class="fas fa-times"></i>
                     </div>
@@ -177,9 +189,9 @@
                     </div>
 
                     <div class="dish-description">
-                        <p>Descrizione: @{{ thisSelectedDish.description ? thisSelectedDish.description : 'Descrizione non disponibile' }}</p>
-                        <p>Ingredienti: @{{ thisSelectedDish.ingredients ? thisSelectedDish.ingredients : 'Ingredienti non disponibili' }}</p>
-                        <p>Prezzo: @{{ thisSelectedDish.unit_price }}€</p>
+                        <p class="m-0 mt-2">Prezzo: @{{ thisSelectedDish.unit_price }}€</p>
+                        <p class="m-0 mt-2">Descrizione: @{{ thisSelectedDish.description ? thisSelectedDish.description : 'Descrizione non disponibile' }}</p>
+                        <p class="m-0 mt-2">Ingredienti: @{{ thisSelectedDish.ingredients ? thisSelectedDish.ingredients : 'Ingredienti non disponibili' }}</p>
                     </div>
                 </div>
             </div>
