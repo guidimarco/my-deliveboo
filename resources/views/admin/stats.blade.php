@@ -6,33 +6,46 @@
 @endsection
 
 @section('content')
-<div id="app">
-    <div class="container">
+    <div id="app" class="container">
         <div class="row">
-            <select class="mt-2" @change="changeRestaurant($event)" name="" id="selectRestaurant">
-                <option :value="restaurant.id" v-for="restaurant in restaurants">@{{restaurant.name}}</option>
-            </select>
-            <div class="col-md-12 d-md-flex justify-content-between flex-wrap">
-                <input type="hidden" id="user-id" value="{{Auth::User()->id}}" />
-                <div class="row mt-3">
-                    <div class="col-6">
-                        <h2 class="text-center">Saldo entrate in euro</h2>
-                        <canvas id="myChart" width="1000" height="1000"></canvas>
+            {{-- aside nav bar --}}
+            <div class="d-none d-lg-block col-lg-4">
+                @include('partials.dashboard.nav-aside')
+            </div>
 
+            <div class="col-12 col-lg-8">
 
-
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
                     </div>
-                    <div class="col-6">
-                        <h2 class="text-center">Totale numero ordini</h2>
-                        <canvas id="myNewChart" width="1000" height="1000"></canvas>
+                @endif
 
+                <div class="title my-2">
+                    <h5>
+                        Statistiche ordini
+                    </h5>
 
+                    <div class="d-lg-none">
+                        <p>
+                            Gestisci i tuoi ristoranti su dispositivi con schermo di larghezza maggiore di 992px.
+                        </p>
                     </div>
 
+                    <div class="d-none d-lg-block">
+                        <input type="hidden" id="user-id" value="{{Auth::User()->id}}" />
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <canvas id="myChart" width="600" height="600"></canvas>
+                            </div>
+                            <div class="col-6">
+                                <canvas id="myNewChart" width="600" height="600"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
 @endsection

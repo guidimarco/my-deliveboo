@@ -1,29 +1,10 @@
-#main-dashboard-wrapper {
+#main-dashboard {
+    background-image: linear-gradient(95deg, #D0EB99 30%, #fff 30%);
+    height: calc(100vh - #{$dashboardHeaderHeight});
+    overflow-y: auto;
 
     .row {
-
-        // aside left nav-bar
-        #sidebarMenu {
-            height: calc(100vh - #{$dashboardHeaderHeight});
-            overflow-y: auto;
-
-            ul.nav {
-                li.nav-item {
-                    min-height: 50px;
-                    i {
-                        display: inline-block;
-                        width: 40px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
         // main part -> content
-        main {
-            height: calc(100vh - #{$dashboardHeaderHeight});
-            overflow-y: auto;
-        } // end main
     }
 
 }

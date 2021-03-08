@@ -1,0 +1,35 @@
+#dashboard-nav-aside {
+    height: calc(100vh - #{$dashboardHeaderHeight});
+    overflow-y: auto;
+    color: #00CCBC;
+    position: fixed;
+
+    ul {
+        position: sticky;
+        top: 0;
+        width: 100%;
+
+        li {
+            display: block;
+            i {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 4px;
+                width: 26px; height: 26px;
+                border-radius: 50%;
+                background-color: #00CCBC;
+                color: #D0EB99;
+            }
+            .active {
+                color: #450063;
+                i {
+                    background-color: #450063;
+                }
+                .aside-menu {
+
+                }
+            }
+        }
+    }
+}

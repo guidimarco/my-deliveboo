@@ -1,32 +1,19 @@
-#main-dashboard-wrapper {
+#main-dashboard {
     // VIEW dishes.index
 
-    .row {
-
-        // main part -> content
-        main {
-
-            .table-container{
-
-                width: 70%;
-                margin: auto;
-
-                // -> tabella con tutti i piatti
-                .table {
-                    .btn-column {
-                        min-width: 320px;
-                    }
-                }
-            }
-
-        } // end main
+    table {
+        .name {
+            max-width: 200px;
+        }
+        .btn-column {
+            min-width: 150px;
+        }
     }
 
 }
 // show dish
 .dish-cover-container{
-    max-height: 300px;
-    width: 50%;
+    height: 200px;
     display: flex;
     justify-content: flex-end;
 

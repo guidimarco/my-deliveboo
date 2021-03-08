@@ -10326,43 +10326,63 @@ a, a:hover {
   box-shadow: 0px 22px 24px 0px rgba(0, 0, 0, 0.08);
 }
 
-header {
+header .header-top {
   height: 70px;
 }
-header #admin-navbar {
+header .header-top #admin-navbar {
   height: 70px;
   background-color: #00CCBC;
   color: white;
 }
-header #admin-navbar img {
+header .header-top #admin-navbar img {
   max-height: 32px;
 }
 
-#main-dashboard-wrapper .row #sidebarMenu {
+#main-dashboard {
+  background-image: linear-gradient(95deg, #D0EB99 30%, #fff 30%);
   height: calc(100vh - 70px);
   overflow-y: auto;
 }
-#main-dashboard-wrapper .row #sidebarMenu ul.nav li.nav-item {
-  min-height: 50px;
-}
-#main-dashboard-wrapper .row #sidebarMenu ul.nav li.nav-item i {
-  display: inline-block;
-  width: 40px;
-  text-align: center;
-}
-#main-dashboard-wrapper .row main {
+#dashboard-nav-aside {
   height: calc(100vh - 70px);
   overflow-y: auto;
+  color: #00CCBC;
+  position: fixed;
 }
-
-#main-dashboard-wrapper .row main .restaurant-dashboard-card {
+#dashboard-nav-aside ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+#dashboard-nav-aside ul li {
+  display: block;
+}
+#dashboard-nav-aside ul li i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #00CCBC;
+  color: #D0EB99;
+}
+#dashboard-nav-aside ul li .active {
+  color: #450063;
+}
+#dashboard-nav-aside ul li .active i {
+  background-color: #450063;
+}
+#main-dashboard .restaurant-dashboard-card {
   flex-direction: column-reverse;
 }
-#main-dashboard-wrapper .row main .restaurant-dashboard-card .restaurant-img-container {
+#main-dashboard .restaurant-dashboard-card .restaurant-img-container {
   width: 100%;
   height: 200px;
 }
-#main-dashboard-wrapper .row main .restaurant-dashboard-card .restaurant-img-container .restaurant-img {
+#main-dashboard .restaurant-dashboard-card .restaurant-img-container .restaurant-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -10372,27 +10392,25 @@ header #admin-navbar img {
 }
 
 @media screen and (min-width: 768px) {
-  #main-dashboard-wrapper .row main .restaurant-dashboard-card {
+  #main-dashboard .restaurant-dashboard-card {
     flex-direction: row;
   }
-  #main-dashboard-wrapper .row main .restaurant-dashboard-card .restaurant-img-container {
+  #main-dashboard .restaurant-dashboard-card .restaurant-img-container {
     width: 300px;
     height: 200px;
     max-height: unset;
     padding: 20px;
   }
 }
-#main-dashboard-wrapper .row main .table-container {
-  width: 70%;
-  margin: auto;
+#main-dashboard table .name {
+  max-width: 200px;
 }
-#main-dashboard-wrapper .row main .table-container .table .btn-column {
-  min-width: 320px;
+#main-dashboard table .btn-column {
+  min-width: 150px;
 }
 
 .dish-cover-container {
-  max-height: 300px;
-  width: 50%;
+  height: 200px;
   display: flex;
   justify-content: flex-end;
 }
@@ -10413,7 +10431,6 @@ header #admin-navbar img {
 }
 
 header {
-  height: 70px;
   color: #2E3333;
 }
 header nav#guest-navbar {

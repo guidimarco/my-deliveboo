@@ -18,6 +18,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -33,17 +34,9 @@
     <!-- header (logo && nav bar) -->
     @include('partials.dashboard.header')
 
-    <!-- main -->
-    <div id="main-dashboard-wrapper" class="container-fluid">
-        <div class="row">
-            <!-- aside nav-bar -->
-            @include('partials.dashboard.sidebar-menu')
-
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-4 pb-4">
-                @yield('content')
-            </main>
-        </div>
-    </div>
+    <main id="main-dashboard" role="main">
+        @yield('content')
+    </main>
 
     @yield('script')
 </body>

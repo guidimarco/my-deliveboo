@@ -40144,7 +40144,7 @@ var app = new Vue({
         data: {
           labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
           datasets: [{
-            label: '',
+            label: 'Saldo entrate in €',
             data: data,
             backgroundColor: ['#71dbd4', '#FFAD00', '#71dbd4', '#FFAD00', '#71dbd4', '#FFAD00', '#71dbd4', '#FFAD00', '#71dbd4', '#FFAD00', '#71dbd4', '#FFAD00'],
             borderWidth: 1,
@@ -40154,7 +40154,7 @@ var app = new Vue({
         options: {
           title: {
             display: true,
-            text: '',
+            text: 'Totale ordini',
             fontSize: 30
           },
           legend: {

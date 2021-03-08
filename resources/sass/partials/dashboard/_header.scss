@@ -1,13 +1,16 @@
 header {
-    height: $dashboardHeaderHeight;
 
-    #admin-navbar {
+    .header-top {
         height: $dashboardHeaderHeight;
-        background-color: #00CCBC;
-        color: white;
 
-        img {
-            max-height: 32px;
+        #admin-navbar {
+            height: $dashboardHeaderHeight;
+            background-color: #00CCBC;
+            color: white;
+
+            img {
+                max-height: 32px;
+            }
         }
     }
 
